@@ -18,13 +18,15 @@ layout: default
     <section id="{{ category }}">
       {% for page in section[1] %}
         {% capture file_path %}{{category}}/{{page}}{% endcapture %}
-        <article>
-          {% markdown {{file_path}}/article.md %}
-        </article>
-        <div class="example">
-          {% markdown {{file_path}}/example.md %}
+        <div id="{{category}}-{{page}}">
+          <article>
+            {% markdown {{file_path}}/article.md %}
+          </article>
+          <div class="example">
+            {% markdown {{file_path}}/example.md %}
+          </div>
+          <div class="clearfix"></div>
         </div>
-        <div class="clearfix"></div>
       {% endfor %}
     </section>
   {% endfor %}

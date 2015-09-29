@@ -15,7 +15,16 @@
       <ul>
         {% for endpoint in site.data.sections.endpoints %}
           {% assign category = endpoint[0] %}
-          <li><a href="#{{category}}">{{category | capitalize}} API</a></li>
+          <li>
+            <a href="#{{category}}">{{category | capitalize}} API</a>
+            <ul>
+              {% for section in endpoint[1] %}
+                {% if section != 'base' %}
+                <li><a href="#{{category}}-{{section}}">{{section | capitalize}}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </li>
         {% endfor %}
       </ul>
     </li>

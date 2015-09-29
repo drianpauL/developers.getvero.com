@@ -36,16 +36,31 @@
             &:hover {
               text-decoration: underline;
             }
+            &.expanded {
+              font-weight: bold;
+            }
+          }
+          .expanded + ul {
+            display: block;
+          }
+          > ul {
+            list-style: none;
+            display: none;
+            li {
+              margin: 0 0 0 20px;
+            }
           }
         }
       }
+    }
+    .active {
+      color: #01B2D0;
     }
   }
 }
 
 #content {
   margin: 0 0 0 220px;
-  padding: 52px 0 0 0;
   section {
     padding: 50px 0;
     border-bottom: 1px solid rgba(109, 109, 109, 0.15);
