@@ -22,12 +22,21 @@ changeLang = (lang) ->
 
   # Change menu
   $("#languages a").removeClass('active')
-  $("#languages a[data-lang=#{window.lang}]").addClass('active')
+  $("#languages a[data-lang='#{window.lang}']").addClass('active')
+
+  # Change state
+  history.pushState({}, "", buildUrl())
+
+buildUrl = ->
+  currentUrl = window.location.origin
+  currentHash = window.location.hash
+  "#{currentUrl}/?#{window.lang}#{currentHash}"
 
 navigationScroll = ->
   $("nav a").click (evn) ->
     evn.preventDefault()
     $('html, body').scrollTo(this.hash, this.hash)
+    window.location.hash = this.hash
 
   aChildren = $("nav li a")
   aArray = []
@@ -51,19 +60,20 @@ navigationScroll = ->
       divHeight = $(theID).height()
       if (windowPos >= divPos && windowPos < (divPos + divHeight))
         if $(theID).is('section')
-          $("a[href='" + theID + "']").addClass("expanded active")
+          $("nav a[href='" + theID + "']").addClass("expanded active")
         else
-          $("a").removeClass("active")
-          $("a[href='" + theID + "']").addClass("active")
+          $("nav a").removeClass("active")
+          $("nav a[href='" + theID + "']").addClass("active")
       else
         if $(theID).is('section')
-          $("a[href='" + theID + "']").removeClass("expanded active")
+          $("nav a[href='" + theID + "']").removeClass("expanded active")
         else
-          $("a[href='" + theID + "']").removeClass("active")
+          $("nav a[href='" + theID + "']").removeClass("active")
       i++
 
     if (windowPos + windowHeight == docHeight)
       if (!$("nav a:last-child").last().hasClass("active"))
         navActiveCurrent = $(".active").attr("href")
-        $("a[href='" + navActiveCurrent + "']").removeClass("active")
+        $("nav a").removeClass("expanded active")
         $("nav a:last-child").last().addClass("active")
+        $("nav a:last-child").last().closest('ul').prev().addClass('expanded')
