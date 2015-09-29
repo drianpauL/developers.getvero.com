@@ -1,0 +1,7 @@
+api:
+  introduction: ['base']
+  authentication: ['base']
+  errors: ['base']
+endpoints:
+  customers: ['base', 'object', 'identify', 'alias', 'retrieve', 'unsubscribe', 'resubscribe', 'delete', 'list']
+  tags: ['base', 'object', 'add', 'remove', 'list']

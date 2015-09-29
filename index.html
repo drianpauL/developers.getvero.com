@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<ul id="languages">
+  <li><a href='#' data-lang="bash">curl</a></li>
+  <li><a href='#' data-lang="ruby">Ruby</a></li>
+  <li><a href='#' data-lang="python">Python</a></li>
+  <li><a href='#' data-lang="php">PHP</a></li>
+  <li><a href='#' data-lang="java">Java</a></li>
+  <li><a href='#' data-lang="node">Node</a></li>
+  <li><a href='#' data-lang="go">Go</a></li>
+</ul>
+
+{% for group in site.data.sections %}
+  {% for section in group[1] %}
+    {% assign category = section[0] %}
+    <section id="{{ category }}">
+      {% for page in section[1] %}
+        {% capture file_path %}{{category}}/{{page}}{% endcapture %}
+        <article>
+          {% markdown {{file_path}}/article.md %}
+        </article>
+        <div class="example">
+          {% markdown {{file_path}}/example.md %}
+        </div>
+        <div class="clearfix"></div>
+      {% endfor %}
+    </section>
+  {% endfor %}
+{% endfor %}

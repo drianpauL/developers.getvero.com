@@ -1,0 +1,23 @@
+<nav id="sidebar">
+  <div id="logo"></div>
+  <ul>
+    <li>API</li>
+    <li>
+      <ul>
+        {% for api in site.data.sections.api %}
+          {% assign category = api[0] %}
+          <li><a href="#{{category}}">{{category | capitalize}}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+    <li>ENDPOINTS</li>
+    <li>
+      <ul>
+        {% for endpoint in site.data.sections.endpoints %}
+          {% assign category = endpoint[0] %}
+          <li><a href="#{{category}}">{{category | capitalize}} API</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+  </ul>
+</nav>
