@@ -1,6 +1,6 @@
 ### Definition
 
-<pre class="bash"><code>POST 'https://api.getvero.com/v1/customers/{CUSTOMER_ID}/tags</code></pre>
+<pre class="bash"><code>GET 'https://api.getvero.com/v1/customers/{CUSTOMER_ID}/tags</code></pre>
 
 ### Example request
 

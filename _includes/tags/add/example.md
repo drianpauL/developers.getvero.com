@@ -1,10 +1,10 @@
 ### Definition
 
-<pre class="bash"><code>POST 'https://api.getvero.com/v1/customers/{CUSTOMER_ID}/tags/add</code></pre>
+<pre class="bash"><code>POST 'https://api.getvero.com/v1/customers/{CUSTOMER_ID}/tags</code></pre>
 
 ### Example request
 
-<pre class="bash"><code>curl 'https://api.getvero.com/v1/customers/123/tags/add' \
+<pre class="bash"><code>curl 'https://api.getvero.com/v1/customers/123/tags' \
   -H "Authorization: {AUTH_TOKEN}" \
   -d "id=123" \
   -d "tags[]=French" \
