@@ -5,7 +5,7 @@
 ### Example request
 
 <pre class="bash"><code>curl 'https://api.getvero.com/v1/events' \
-  -H "Authorization: {AUTH_TOKEN}" \
+  -u :{AUTH_TOKEN} \
   -d "event=Purchased item" \
   -d "item[name]=SodaStream" \
   -d "item[sku]=ss-white-bamboo" \

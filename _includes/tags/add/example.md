@@ -1,14 +1,11 @@
 ### Definition
 
-<pre class="bash"><code>POST 'https://api.getvero.com/v1/customers/{CUSTOMER_ID}/tags</code></pre>
+<pre class="bash"><code>POST 'https://api.getvero.com/v1/customers/{CUSTOMER_ID}/tags/{TAG}</code></pre>
 
 ### Example request
 
-<pre class="bash"><code>curl 'https://api.getvero.com/v1/customers/123/tags' \
-  -H "Authorization: {AUTH_TOKEN}" \
-  -d "id=123" \
-  -d "tags[]=French" \
-  -d "tags[]=Australian"</code></pre>
+<pre class="bash"><code>curl 'https://api.getvero.com/v1/customers/123/tags/French' \
+  -u :{AUTH_TOKEN}</code></pre>
 
 ### Example response
 
@@ -16,12 +13,6 @@
   "data": [{
     "type": "tags",
     "id": "French",
-    "attributes": {
-      "added": true,
-      "created_at": "2015-10-13T18:11:03+00:00"
-    }, {
-    "type": "tags",
-    "id": "Australian",
     "attributes": {
       "added": true,
       "created_at": "2015-10-13T18:11:03+00:00"

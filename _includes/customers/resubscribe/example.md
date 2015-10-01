@@ -5,14 +5,14 @@
 ### Example request
 
 <pre class="bash"><code>curl 'https://api.getvero.com/v1/customers/123/resubscribe' \
-  -H "Authorization: {AUTH_TOKEN}"</code></pre>
+  -u :{AUTH_TOKEN}</code></pre>
 
 ### Example response
 
 <pre class="bash"><code class="json">{
   "data": [{
     "type": "customers",
-    "id": "ABC-123",
+    "id": "123",
     "attributes": {
       "unsubscribed": false
     }

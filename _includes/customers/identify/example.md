@@ -5,7 +5,7 @@
 ### Example request
 
 <pre class="bash"><code>curl 'https://api.getvero.com/v1/customers' \
-  -H "Authorization: {AUTH_TOKEN}" \
+  -u :{AUTH_TOKEN} \
   -d "id=123" \
   -d "first_name=Damien" \
   -d "last_name=Brzoska" \

@@ -1,14 +1,11 @@
 ### Definition
 
-<pre class="bash"><code>DELETE 'https://api.getvero.com/v1/customers/{CUSTOMER_ID}/tags</code></pre>
+<pre class="bash"><code>DELETE 'https://api.getvero.com/v1/customers/{CUSTOMER_ID}/tags/{TAG}</code></pre>
 
 ### Example request
 
-<pre class="bash"><code>curl 'https://api.getvero.com/v1/customers/123/tags' \
-  -H "Authorization: {AUTH_TOKEN}" \
-  -d "id=123" \
-  -d "tags[]=French" \
-  -d "tags[]=Australian"</code></pre>
+<pre class="bash"><code>curl 'https://api.getvero.com/v1/customers/123/tags/French' \
+  -u :{AUTH_TOKEN}</code></pre>
 
 ### Example response
 
@@ -18,13 +15,7 @@
     "id": "French",
     "attributes": {
       "removed": true,
-    },
-  }, {
-    "type": "tags",
-    "id": "Australian",
-    "attributes": {
-      "removed": true,
-    },
+    }
   }],
   "relationships": {
     "customer": {
