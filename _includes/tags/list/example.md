@@ -9,7 +9,7 @@
 <pre class="bash"><code>curl 'https://api.getvero.com/v1/customers/123/tags' \
   -u {AUTH_TOKEN}:</code></pre>
 
-<pre class="ruby"><code>Vero::Tags.all({id: 123})</code></pre>
+<pre class="ruby"><code>Vero::Tags.all({user_id: 123})</code></pre>
 
 ### Example response
 

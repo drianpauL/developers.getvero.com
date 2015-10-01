@@ -9,7 +9,7 @@
 <pre class="bash"><code>curl 'https://api.getvero.com/v1/customers/123/events' \
   -u {AUTH_TOKEN}:</code></pre>
 
-<pre class="ruby"><code>Vero::Events.all({id: 123})</code></pre>
+<pre class="ruby"><code>Vero::Events.all({user_id: 123})</code></pre>
 
 ### Example response
 

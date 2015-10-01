@@ -8,6 +8,7 @@
 
 <pre class="bash"><code>curl 'https://api.getvero.com/v1/events' \
   -u {AUTH_TOKEN}: \
+  -d "user_id=123" \
   -d "event=Purchased item" \
   -d "item[name]=SodaStream" \
   -d "item[sku]=ss-white-bamboo" \
@@ -15,6 +16,7 @@
   -d "item[color]=white-bamboo"</code></pre>
 
 <pre class="ruby"><code>Vero::Events.track({
+  user_id: 123,
   event: 'Purchased item',
   item: {
     name: 'SodaStream',
@@ -29,7 +31,7 @@
 <pre class="all"><code class="json">{
    "data":{
       "type":"pending",
-      "id":"French",
+      "id":"Purchased item",
       "links": {
         "self": "/customers/123/events"
       }
