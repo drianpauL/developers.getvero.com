@@ -1,6 +1,6 @@
 ## List
 
-This endpoint lets you retrieve all the tags for a customer.
+This endpoint lets you retrieve all the events for a customer.
 
 | Arguments |      |
 | ---------: | :--- |

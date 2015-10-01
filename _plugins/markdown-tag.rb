@@ -22,7 +22,7 @@ module Jekyll
       site = context.registers[:site]
       file = parse_file_name(context, @text)
       tmpl = File.read File.join Dir.pwd, "_includes", file
-      tmpl = (Liquid::Template.parse(tmpl)).render site.site_payload
+      tmpl = (Liquid::Template.parse(tmpl)).render site.site_payload if site
       html = Kramdown::Document.new(tmpl, syntax_highlighter: 'rouge', enable_coderay: false).to_html
     end
   end

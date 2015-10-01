@@ -17,7 +17,7 @@ changeLang = (lang) ->
   localStorage.setItem('lang', window.lang)
 
   # Hide/Show code
-  $(".lang, .example pre").hide()
+  $(".lang, .example pre:not(.all)").hide()
   $(".lang.#{window.lang}, .example pre.#{window.lang}").css('display', 'block')
 
   # Change menu

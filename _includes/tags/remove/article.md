@@ -1,8 +1,10 @@
 ## Remove
 
-This endpoint removes one or multiple tags for a customer profile.
+This endpoint removes a tag to a customer profile.
 
 | Arguments |      |
 | ---------: | :--- |
 | **id** <span>Required</span> | The unique identifier of the customer |
-| **tags** <span>Required</span> | Array listing the tags to remove |
+| **tag** <span>Required</span> | Tag to remove |
+
+{% markdown snippets/async_request.md %}

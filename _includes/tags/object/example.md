@@ -1,6 +1,6 @@
 ### Example
 
-<pre class="bash"><code class="json">{
+<pre class="all"><code class="json">{
   "data": [{
     "type": "tags",
     "id": "Engineer"

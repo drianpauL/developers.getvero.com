@@ -5,3 +5,5 @@ This endpoint creates a new customer profile if the customer doesn't exist yet. 
 | Arguments |      |
 | ---------: | :--- |
 | **id** <span>Required</span> | The unique identifier of the customer |
+
+{% markdown snippets/async_request.md %}

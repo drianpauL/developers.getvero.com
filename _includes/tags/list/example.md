@@ -2,14 +2,18 @@
 
 <pre class="bash"><code>GET 'https://api.getvero.com/v1/customers/{CUSTOMER_ID}/tags</code></pre>
 
+<pre class="ruby"><code>Vero::Tags.all</code></pre>
+
 ### Example request
 
 <pre class="bash"><code>curl 'https://api.getvero.com/v1/customers/123/tags' \
-  -u :{AUTH_TOKEN}</code></pre>
+  -u {AUTH_TOKEN}:</code></pre>
+
+<pre class="ruby"><code>Vero::Tags.all({id: 123})</code></pre>
 
 ### Example response
 
-<pre class="bash"><code class="json">{
+<pre class="all"><code class="json">{
   "data": [{
     "type": "tags",
     "id": "French",
@@ -32,5 +36,11 @@
         "id": "123"
       }
     }
-  }
+  },
+  "links": {
+    "first": "https://api.getvero.com/v1/customers/123/tags?page[number]=1&page[size]=100",
+    "last": "https://api.getvero.com/v1/customers/123/tags?page[number]=13&page[size]=100",
+    "prev": null,
+    "next": "https://api.getvero.com/v1/customers/123/tags?page[number]=2&page[size]=100"
+  } 
 }</code></pre>

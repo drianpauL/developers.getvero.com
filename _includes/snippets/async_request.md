@@ -1,0 +1,1 @@
+**Note**: Due to the high amount of request, all requests to this endpoint are asynchronous and return a status `202 Accepted`

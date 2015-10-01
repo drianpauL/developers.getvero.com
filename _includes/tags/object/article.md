@@ -2,4 +2,4 @@
 
 | Attributes |      |
 | ---------: | :--- |
-| **name** <span>String</span> | The name of the tag |
+| **id** <span>String</span> | The name of the tag |
