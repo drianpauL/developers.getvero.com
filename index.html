@@ -2,32 +2,18 @@
 layout: default
 ---
 
-<ul id="languages">
-  <li><a href='#' data-lang="bash">curl</a></li>
-  <li><a href='#' data-lang="ruby">Ruby</a></li>
-  <!-- <li><a href='#' data-lang="python">Python</a></li>
-  <li><a href='#' data-lang="php">PHP</a></li>
-  <li><a href='#' data-lang="java">Java</a></li>
-  <li><a href='#' data-lang="node">Node</a></li>
-  <li><a href='#' data-lang="go">Go</a></li> -->
-</ul>
+Want to read more about our API ?
+<a href="/api.html">Documentation</a>
 
-{% for group in site.data.sections %}
-  {% for section in group[1] %}
-    {% assign category = section[0] %}
-    <section id="{{ category }}">
-      {% for page in section[1] %}
-        {% capture file_path %}{{category}}/{{page}}{% endcapture %}
-        <div id="{{category}}-{{page}}">
-          <article>
-            {% markdown {{file_path}}/article.md %}
-          </article>
-          <div class="example">
-            {% markdown {{file_path}}/example.md %}
-          </div>
-          <div class="clearfix"></div>
-        </div>
-      {% endfor %}
-    </section>
-  {% endfor %}
-{% endfor %}
+<h4>Key resources</h4>
+<ul>
+  <li>
+    <a href="/guides/webhooks.html">Webhooks</a>
+  </li>
+  <li>
+    <a href="/guides.html">Getting started with guides</a>
+  </li>
+  <li>
+    <a href="/libraries.html">Libraries</a>
+  </li>
+</ul>

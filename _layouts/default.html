@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
-    {% include navigation.html %}
-    <div id='content'>
-      {{ content }}
-      <div id='code'>
-      </div>
-    </div>
+  <body id="developers">
+    {% include header.html %}
+    {{content}}
+    {% include footer.html %}
   </body>
 </html>
