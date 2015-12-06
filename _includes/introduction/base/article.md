@@ -19,7 +19,6 @@ Vero has written official API libraries for the following languages. Clicking th
 Vero's customers have written and shared a variaty of libraries for the following languages. Clicking the links below will take you to the Github repository for that library where you will find more detailed information on the setup for that library.
 
 - [Ruby, alternate](https://github.com/shaneog/vero-ruby)
-- [PHP, alternate](https://github.com/ArturKp/vero-php-api)
 - [Node](https://github.com/hubdoc/vero-node)
 - [Node, alternate](https://github.com/devmach/vero)
 - [Python](https://github.com/waveaccounting/vero-python)

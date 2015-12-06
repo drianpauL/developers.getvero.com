@@ -1,6 +1,6 @@
 ## Remove
 
-This endpoint removes a tag to a user profile.
+This endpoint removes a tag from a user's profile.
 
 | Parameters |      |
 | ---------: | :--- |
