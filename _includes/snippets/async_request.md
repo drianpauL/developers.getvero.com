@@ -1,1 +1,1 @@
-**Note**: Due to the high amount of request, all requests to this endpoint are asynchronous and return a status `202 Accepted`
+**Note**: Due to the high amount of request, all requests to this endpoint are asynchronously processed, but will return a status `200 Accepted` (which, strictly speaking, suggests synchronous processing).

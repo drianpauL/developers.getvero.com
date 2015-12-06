@@ -1,9 +1,11 @@
 # Authentication
 
-To authenticate against the Vero API, you need to use your AUTH TOKEN in each request. You can manage your API credentials from your [settings page](https://app.getvero.com/settings/project). With your AUTH TOKEN you can access all your data so make sure you keep it secret!
+To authenticate against the Vero API, you need to use your `auth_token` in each request. To access your API credentials, visit the [Settings page](https://app.getvero.com/settings/project) within your Vero account. 
 
-<p class="lang bash">Requests are authenticated using <a href='https://en.wikipedia.org/wiki/Basic_access_authentication'>HTTP Basic Auth</a>. Provide your Auth Token as token in an Authorization header. You do not need to provide a password.</p>
+Your `auth_token` can access all your data and, with future API releases, will be able to read from Vero too. Ensure you keep it secret!
 
-To use your AUTH TOKEN, you need only set `Vero.auth_token` equal to the key. The Ruby library will automatically send this token in each request.
+<p class="lang bash">Requests are authenticated by providing a parameter called `auth_token` containing your `auth_token` with each request.</p>
+
+<p class="lang ruby">To authenticate using the Ruby library, set <code>Vero.auth_token</code> equal to your <code>auth_token</code>. The Ruby library will automatically send this token in each request.</p>
 
 All API requests must be made over [HTTPS](https://en.wikipedia.org/wiki/HTTPS). Calls made over plain HTTP will fail. You must authenticate for all requests.

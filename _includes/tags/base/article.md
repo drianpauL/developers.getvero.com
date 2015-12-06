@@ -1,3 +1,3 @@
-# Tags API
+# Tags
 
-The tags API lets you add or remove tags to any of your customers. You can also retrieve your entire list of tags for a customer.
+The tags endpoint lets you add or remove tags to or from any of your users.

@@ -1,7 +1,7 @@
 <nav id="sidebar">
   <div id="logo"><img src="http://assets.getvero.com.s3.amazonaws.com/marketing-redesign/logo-blue.svg"></div>
   <ul>
-    <li>API</li>
+    <li>API v2.0</li>
     <li>
       <ul>
         {% for api in site.data.sections.api %}
@@ -16,7 +16,7 @@
         {% for endpoint in site.data.sections.endpoints %}
           {% assign category = endpoint[0] %}
           <li>
-            <a href="#{{category}}">{{category | capitalize}} API</a>
+            <a href="#{{category}}">{{category | capitalize}}</a>
             <ul>
               {% for section in endpoint[1] %}
                 {% if section != 'base' %}
