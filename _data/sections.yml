@@ -3,6 +3,6 @@ api:
   authentication: ['base']
   errors: ['base']
 endpoints:
-  customers: ['base', 'object', 'identify', 'alias', 'unsubscribe', 'resubscribe', 'delete', 'retrieve']
-  tags: ['base', 'object', 'add', 'remove', 'list']
-  events: ['base', 'object', 'track', 'list']
+  users: ['base', 'object', 'identify', 'alias', 'unsubscribe', 'resubscribe', 'delete']
+  tags: ['base', 'object', 'add', 'remove']
+  events: ['base', 'object', 'track']

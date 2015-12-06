@@ -1,10 +1,10 @@
 ## Add
 
-This endpoint adds a tag to a customer profile.
+This endpoint adds a tag to a user's profile.
 
-| Arguments |      |
+| Parameters |      |
 | ---------: | :--- |
-| **user_id** <span>Required</span> | The unique identifier of the customer |
-| **tag** <span>Required</span> | Tag to add |
+| **id** <span>Required</span> | The unique identifier of the user |
+| **add** <span>Required</span> | Tags to add |
 
 {% markdown snippets/async_request.md %}

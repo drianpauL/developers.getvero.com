@@ -1,3 +1,3 @@
 # Events API
 
-The events API lets you track events for your customers.
+The events API lets you track events based on actions your customers take in real time.
