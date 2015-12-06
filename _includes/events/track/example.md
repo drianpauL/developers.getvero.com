@@ -1,7 +1,9 @@
 ### Definition
 
 <pre class="bash"><code>POST 'https://api.getvero.com/api/v2/events/track'</code></pre>
-<pre class="ruby"><code>Vero::Events.track</code></pre>
+<pre class="ruby"><code>vero.events.track!</code></pre>
+<pre class="javascript"><code>N/A</code></pre>
+<pre class="php"><code>$v->track()</code></pre>
 
 ### Example request
 
@@ -12,13 +14,28 @@
   -d 'data={"product_name": "Red T-shirt", "product_url": "http://www.yourdomain.com/products/red-t-shirt"}'
 </code></pre>
 
-<pre class="ruby"><code>Vero::Events.track({
-  user_id: 123,
-  event: 'Purchased item',
-  item: {
-    name: 'SodaStream',
-    sku: 'ss-white-bamboo',
-    url: 'https://www.sodastream.com/p/ss-white-bamboo',
-    color: 'white-bamboo'
+<pre class="ruby"><code>include Vero::DSL
+
+vero.events.track!({
+  identity: {
+    id: '123', 
+    email: 'john@smith.com'
+  }
+  event_name: 'Viewed product',
+  data: {
+    product_name: 'Red T-shirt', 
+    product_url: 'http://www.yourdomain.com/products/red-t-shirt'
   }
 })</code></pre>
+
+<pre class="javascript"><code>_veroq.push(['track', 'viewed product', {      
+  product_name: 'Red T-shirt',    
+  product_url: 'http://www.yourdomain.com/products/red-t-shirt'  
+}]);</code></pre>
+
+<pre class="php"><code>$v->track('Viewed product',
+array('id' => '123'),
+array(
+  'product_name' => 'Red T-shirt', 
+  'product_url' => 'http://www.yourdomain.com/products/red-t-shirt')
+);</code></pre>
