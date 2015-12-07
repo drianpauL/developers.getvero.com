@@ -1,24 +1,30 @@
 ### Definition
 
-<pre class="bash"><code>POST 'https://api.getvero.com/v1/customers/{CUSTOMER_ID}/tags/{TAG}</code></pre>
-
-<pre class="ruby"><code>Vero::Tags.add</code></pre>
+<pre class="bash"><code>PUT 'https://api.getvero.com/api/v2/users/tags/edit'</code></pre>
+<pre class="ruby"><code>vero.users.edit_user_tags!</code></pre>
+<pre class="javascript"><code>N/A</code></pre>
+<pre class="php"><code>$v->tags()</code></pre>
 
 ### Example request
 
-<pre class="bash"><code>curl 'https://api.getvero.com/v1/customers/123/tags/French' \
-  -u {AUTH_TOKEN}:</code></pre>
+<pre class="bash"><code>curl -X PUT 'https://api.getvero.com/api/v2/users/tags/edit' \
+  -d 'auth_token=AUTH_TOKEN' \
+  -d 'id=1234' \
+  -d 'add=["prospect"]' \
+  -d 'remove=[]'</code></pre>
+<pre class="ruby"><code>include Vero::DSL
 
-<pre class="ruby"><code>Vero::Tags.add({user_id: 123, tag: 'French'})</code></pre>
-
-### Example response
-
-<pre class="all"><code class="json">{
-   "data":{
-      "type":"pending",
-      "id":"French",
-      "links": {
-        "self": "/customers/123/tags"
-      }
-   }
-}</code></pre>
+vero.users.edit_user_tags!({
+  id: '123', 
+  add: ['prospect'], 
+  remove: []
+})</code></pre>
+<pre class="javascript"><code>_veroq.push(['tags', {    
+  id: '123',    
+  add: ['prospect'],    
+  remove: []  
+}]);</code></pre>
+<pre class="php"><code>$v->tags('123',
+  array('prospect'),
+  array()
+);</code></pre>

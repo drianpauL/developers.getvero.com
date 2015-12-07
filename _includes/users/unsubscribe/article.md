@@ -1,10 +1,9 @@
-## Add
+## Unsubscribe
 
-This endpoint adds a tag to a user's profile.
+This endpoint unsubscribes a single user.
 
 | Parameters |      |
 | ---------: | :--- |
 | **id** <span>Required</span> | The unique identifier of the user |
-| **add** <span>Required</span> | Tags to add |
 
 {% markdown snippets/async_request.md %}

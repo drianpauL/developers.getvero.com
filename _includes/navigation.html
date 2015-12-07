@@ -1,32 +1,26 @@
 <nav id="sidebar">
-  <div id="logo"></div>
-  <ul>
-    <li>API</li>
-    <li>
-      <ul>
-        {% for api in site.data.sections.api %}
-          {% assign category = api[0] %}
-          <li><a href="#{{category}}">{{category | capitalize}}</a></li>
-        {% endfor %}
-      </ul>
-    </li>
-    <li>ENDPOINTS</li>
-    <li>
-      <ul>
-        {% for endpoint in site.data.sections.endpoints %}
-          {% assign category = endpoint[0] %}
-          <li>
-            <a href="#{{category}}">{{category | capitalize}} API</a>
-            <ul>
-              {% for section in endpoint[1] %}
-                {% if section != 'base' %}
-                <li><a href="#{{category}}-{{section}}">{{section | capitalize}}</a></li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-          </li>
-        {% endfor %}
-      </ul>
-    </li>
+  <div id="logo"><img src="http://assets.getvero.com.s3.amazonaws.com/marketing-redesign/logo-blue.svg"></div>
+  <h4 class="label">API v2.0</h4>
+  <ul class="api-nav unstyled-list">
+    {% for api in site.data.sections.api %}
+      {% assign category = api[0] %}
+        <li><a href="#{{category}}">{{category | capitalize}}</a></li>
+      {% endfor %}
+  </ul>
+  <h4 class="label">ENDPOINTS</h4>
+  <ul class="endpoints-nav unstyled-list">
+    {% for endpoint in site.data.sections.endpoints %}
+      {% assign category = endpoint[0] %}
+      <li>
+        <a href="#{{category}}">{{category | capitalize}}</a>
+        <ul class="inner-list unstyled-list">
+          {% for section in endpoint[1] %}
+            {% if section != 'base' %}
+            <li><a href="#{{category}}-{{section}}">{{section | capitalize}}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
   </ul>
 </nav>
