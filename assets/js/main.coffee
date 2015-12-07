@@ -2,7 +2,7 @@
 ---
 
 $ ->
-  $("#languages a").on 'click', (e) ->
+  $("#languages a:not(#all)").on 'click', (e) ->
     e.preventDefault()
     changeLang $(this).data('lang')
     false
