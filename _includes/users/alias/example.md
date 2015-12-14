@@ -17,9 +17,9 @@ vero.users.reidentify!({
   id: '123', 
   new_id: '456'
 })</code></pre>
-<pre class="javascript"><code>_veroq.push(
-  'reidentify', 
+<pre class="javascript"><code>_veroq.push([
+  'reidentify', {
   '456', // The new user ID
   '123'// The old user ID
-);</code></pre>
+}]);</code></pre>
 <pre class="php"><code>This endpoint is not supported by the gem at this time.</code></pre>
