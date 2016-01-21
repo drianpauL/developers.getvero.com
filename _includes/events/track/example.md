@@ -18,24 +18,24 @@
 
 vero.events.track!({
   identity: {
-    id: '123', 
+    id: '123',
     email: 'john@smith.com'
-  }
+  },
   event_name: 'Viewed product',
   data: {
-    product_name: 'Red T-shirt', 
+    product_name: 'Red T-shirt',
     product_url: 'http://www.yourdomain.com/products/red-t-shirt'
   }
 })</code></pre>
 
-<pre class="javascript"><code>_veroq.push(['track', 'viewed product', {      
-  product_name: 'Red T-shirt',    
-  product_url: 'http://www.yourdomain.com/products/red-t-shirt'  
+<pre class="javascript"><code>_veroq.push(['track', 'viewed product', {
+  product_name: 'Red T-shirt',
+  product_url: 'http://www.yourdomain.com/products/red-t-shirt'
 }]);</code></pre>
 
 <pre class="php"><code>$v->track('Viewed product',
 array('id' => '123'),
 array(
-  'product_name' => 'Red T-shirt', 
+  'product_name' => 'Red T-shirt',
   'product_url' => 'http://www.yourdomain.com/products/red-t-shirt')
 );</code></pre>
