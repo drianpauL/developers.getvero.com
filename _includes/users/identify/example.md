@@ -18,7 +18,7 @@
 
 vero.users.track!({
   id: '123',
-  email: 'damienb@getvero.com' 
+  email: 'damienb@getvero.com',
   data: {
     first_name: 'Damien',
     last_name: 'Brzoska',
@@ -26,10 +26,10 @@ vero.users.track!({
   }
 })</code></pre>
 
-<pre class='javascript'><code>_veroq.push(['user', {      
-  id: '123', 
+<pre class='javascript'><code>_veroq.push(['user', {
+  id: '123',
   email: 'damienb@getvero.com',
-  first_name: 'Damien',    
+  first_name: 'Damien',
   last_name: 'Brzoska',
   subscription: 'medium'
 }]);
