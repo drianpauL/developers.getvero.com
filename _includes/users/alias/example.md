@@ -1,13 +1,13 @@
 ### Definition
 
-<pre class="bash"><code>POST 'https://api.getvero.com/api/v2/users/reidentify'</code></pre>
+<pre class="bash"><code>PUT 'https://api.getvero.com/api/v2/users/reidentify'</code></pre>
 <pre class="ruby"><code>vero.users.reidentify!</code></pre>
 <pre class="javascript"><code>N/A</code></pre>
 <pre class="php"><code>N/A</code></pre>
 
 ### Example request
 
-<pre class="bash"><code>curl 'https://api.getvero.com/api/v2/users/reidentify' \
+<pre class="bash"><code>curl -XPUT 'https://api.getvero.com/api/v2/users/reidentify' \
   -d 'auth_token=AUTH_TOKEN' \
   -d 'id=123' \
   -d 'new_id=456'</code></pre>
